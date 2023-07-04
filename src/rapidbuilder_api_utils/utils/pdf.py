@@ -10,6 +10,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from seleniumwire import webdriver
+from selenium.webdriver.chrome.service import Service
 
 
 def send_devtools(driver, cmd, params=None):
@@ -37,6 +38,8 @@ def get_pdf_from_html(path, chromedriver=None, p_options=None, args=None):
     if args is None:
         args = {}
 
+    service = Service(executable_path=r'/usr/bin/chromedriver')
+    
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")
     options.add_argument("--disable-gpu")
@@ -49,7 +52,7 @@ def get_pdf_from_html(path, chromedriver=None, p_options=None, args=None):
 
     # pylint: disable=E1123
     driver = webdriver.Chrome(
-        chromedriver, options=options, seleniumwire_options=sel_options
+        service=service, options=options, seleniumwire_options=sel_options
     )
     driver.set_window_size(1920, 1080)
 
