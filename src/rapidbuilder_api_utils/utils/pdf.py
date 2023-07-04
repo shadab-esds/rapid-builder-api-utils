@@ -37,7 +37,7 @@ def get_pdf_from_html(path, chromedriver=None, p_options=None, args=None):
     if args is None:
         args = {}
 
-    options = Options()
+    options = webdriver.ChromeOptions()
     options.add_argument("--headless")
     options.add_argument("--disable-gpu")
     options.add_argument("--no-sandbox")
