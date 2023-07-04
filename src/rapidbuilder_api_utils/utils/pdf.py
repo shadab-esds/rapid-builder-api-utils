@@ -38,7 +38,7 @@ def get_pdf_from_html(path, chromedriver=None, p_options=None, args=None):
     if args is None:
         args = {}
 
-    service = Service(executable_path=r'/usr/bin/chromedriver')
+    service = Service(executable_path=r'/usr/local/bin/chromedriver')
     
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")
