@@ -10,8 +10,7 @@ RAPIDBUILDER_API_CORS_ORIGINS = os.getenv("RAPIDBUILDER_API_CORS_ORIGINS", "*")
 ALLOW_ALL_ORIGINS = "*"
 CORS_ORIGINS = []
 if RAPIDBUILDER_API_CORS_ORIGINS != "*":
-    CORS_ORIGINS = RAPIDBUILDER_API_CORS_ORIGINS.split(",") 
-ADMIN_GROUP = "rapidbuilder-admin"
+    CORS_ORIGINS = RAPIDBUILDER_API_CORS_ORIGINS.split(",")
 DESIGNER_GROUP = "rapidbuilder-designer"
 REVIEWER_GROUP = "rapidbuilder-reviewer"
 CLIENT_GROUP = "rapidbuilder-client"
@@ -35,8 +34,6 @@ FILTER_MAPS = {
     "form_name": {"field": "form_name", "operator": "ilike"},
     "id": {"field": "id", "operator": "eq"},
     "form_type": {"field": "form_type", "operator": "eq"},
-    "can_bundle": {"field": "can_bundle", "operator": "eq"},
-    "is_bundle": {"field": "is_bundle", "operator": "eq"},
 }
 
 DEFAULT_PROCESS_KEY = "Defaultflow"
