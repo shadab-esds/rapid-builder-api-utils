@@ -90,7 +90,6 @@ venv.bak/
 # IntelliJ IDEA
 .idea
 *.iml
-*.pyc
 
 # Mongodb
 mongodb/
